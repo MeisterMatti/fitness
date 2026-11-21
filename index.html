@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Fitness-Tracker</title>
+  <meta name="description" content="Training im Studio und zu Hause festhalten – Daten bleiben auf dem Handy.">
+  <meta name="theme-color" content="#7fa6d3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1828" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Fitness">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Hauptmenü">
+    <button class="tab" data-tab="training" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4M6 7v10M18 7v10M21 10v4M6 12h12"/></svg>
+      <span>Training</span>
+    </button>
+    <button class="tab" data-tab="verlauf" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M5 15l4-5 4 3 6-7"/></svg>
+      <span>Verlauf</span>
+    </button>
+    <button id="micBtn" class="mic" type="button" aria-label="Spracheingabe">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg>
+    </button>
+    <button class="tab" data-tab="bericht" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6"/></svg>
+      <span>Bericht</span>
+    </button>
+    <button class="tab" data-tab="mehr" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>
+      <span>Mehr</span>
+    </button>
+  </nav>
+
+  <div id="sheet-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <div id="fx-root" class="fx-root" aria-hidden="true"></div>
+
+  <noscript><p class="noscript">Diese App braucht JavaScript.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
