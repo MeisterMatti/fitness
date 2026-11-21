@@ -1,6 +1,6 @@
 // Offline-Betrieb: Die App-Dateien werden auf dem Handy zwischengespeichert.
 // Bei jeder Änderung an der App VERSION erhöhen, damit Handys die neue Fassung bekommen.
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 const CACHE = `fitness-${VERSION}`;
 const FILES = [
   './', './index.html', './manifest.webmanifest', './css/styles.css',

@@ -6,7 +6,7 @@ import { openSheet, closeSheet, toast, ask, applyTheme } from './ui.js';
 import { ICON, currentTab } from './nav.js';
 import { IN_CLAUDE, env } from './env.js';
 
-export const APP_VERSION = '1.0.1';
+export const APP_VERSION = '1.0.2';
 let view = null;
 let exLoc = null;
 let persisted = null;
@@ -38,7 +38,7 @@ export function renderMehr(v) {
       <label class="field"><span>Erinnern, wenn die letzte Sicherung älter ist als</span>
         <select class="select" data-set="backupDays">${REMIND.map(d => `<option value="${d}" ${st.backupDays === d ? 'selected' : ''}>${d} Tage</option>`).join('')}</select></label>
       ${cloud ? `<p class="note">Deine Einträge liegen in deinem Claude-Konto. Sie sind auf Handy und PC gleich und bleiben auch beim Handywechsel erhalten. Die Sicherungsdatei ist eine zusätzliche Kopie, z. B. für die NAS oder für den späteren Umzug in die Handy-App.</p>`
-        : `<p class="note">So kommt die Sicherung auf deine NAS: Die Datei landet im Ordner „Download“ auf dem Handy. FolderSync kopiert sie im Heimnetz automatisch auf die NAS. Im Notfall (neues Handy, Daten weg) holst du die Datei von dort zurück und tippst auf „Sicherung einlesen“. Mach auf jeden Fall eine Sicherung, bevor du das Handy wechselst.</p>
+        : `<p class="note">Deine Einträge liegen nur auf diesem Handy. Die Sicherungsdatei landet im Ordner „Download“. Leg sie ab und zu an einen zweiten Ort, z. B. in deine Cloud, auf den PC oder per Mail an dich selbst. Im Notfall (neues Handy, Daten weg) holst du die Datei von dort zurück und tippst auf „Sicherung einlesen“. Mach auf jeden Fall eine Sicherung, bevor du das Handy wechselst.</p>
       <p class="note"><strong>Achtung:</strong> „Browserdaten löschen“ in Chrome löscht auch dein Training. Vorher sichern.</p>`}
       <button class="btn-link" type="button" data-act="csv">Alles als Tabelle für Excel speichern</button>
     </section>
